@@ -1,0 +1,24 @@
+<h1 align="center">TODO</h1>
+<div id="main-div">
+    <div id="create-div">
+        <h1>Create New Todo</h1>
+        <form action="/create" method="post">
+            <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+            <input type="text" name="todo_text" class="inp" placeholder="Enter Your Task" required> <br>
+            <input type="date" name="due_date" class="inp" required><br>
+            <button type="submit" class="btn">+ Create</button>
+        </form>
+    </div>
+    <div id="list-div">
+        <table>
+            <tr><% Todo.all.map do |todo|%></tr>
+            <td><%= todo.id %></td>
+            <td><%= todo.task_name %></td>
+            <td><%= todo.due_date %></td>
+            <td><%= todo.status %></td>
+            <td><a href="/complete/<%= todo.id %>"><button>Complete</button></a></td>
+            <td><a href="/delete/<%= todo.id %>"><button>Delete</button></a></td>
+            <% end %>
+        </table>
+    </div>
+</div>

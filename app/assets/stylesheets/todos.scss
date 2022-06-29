@@ -1,0 +1,38 @@
+*{
+    font-family: sans-serif;
+}
+#main-div{
+    display: grid;
+    grid-template-columns: 40% 50%;
+    height: fit-content;
+    width: 100%;
+    padding: 100px;
+    padding-left: 200px;
+}
+#create-div {
+    background-color: rgb(236, 234, 234);
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+#list-div{
+    background-color: rgb(236, 234, 234);
+    padding: 20px;
+    border-radius: 10px;
+}
+.inp{
+    height: 40px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgb(165, 165, 165);
+    padding-left: 4px;
+    margin-bottom: 20px;
+}
+.btn {
+    height: 50px;
+    width: 300px;
+    background-color: rgb(143, 143, 249);
+    box-shadow: 1px 1px 10px rgb(165, 165, 165);
+}
